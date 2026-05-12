@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arxivhaiku"
+version = "1.0.0"
+description = "Heroku-haikunator-style two-word identifier generator with 5-char Crockford Base32 bijection."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "arxivhaiku contributors"}
+]
+keywords = ["haikunator", "identifier", "wordlist", "alias", "naming"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.scripts]
+arxivhaiku = "arxivhaiku.__main__:main"
+
+[project.urls]
+Homepage = "https://example.com/arxivhaiku"
+Documentation = "https://example.com/arxivhaiku/docs"
+
+[tool.setuptools]
+packages = ["arxivhaiku"]
+
+[tool.setuptools.package-data]
+arxivhaiku = ["data/*.txt"]
