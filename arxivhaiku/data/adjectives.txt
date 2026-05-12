@@ -261,15 +261,12 @@ astute
 astylar
 asunder
 aswarm
-atheism
 athirst
 atilt
 atingle
-atomism
 atonal
 atonic
 atrip
-attack
 attent
 attired
 attrite
@@ -307,11 +304,13 @@ awkward
 awned
 awnless
 awny
+awry
 aymaran
 azilian
 azoic
 azonal
 azonic
+azygous
 babist
 babyish
 baccate
@@ -344,7 +343,9 @@ barbate
 barbed
 bardy
 bare
+bared
 bargain
+baring
 barky
 barred
 basal
@@ -353,11 +354,11 @@ bashful
 bass
 bassy
 bated
+bats
 battled
 batty
 bausond
 bawdy
-bawling
 beached
 beachy
 beaded
@@ -372,8 +373,9 @@ bearish
 beastly
 beat
 beaten
+beating
 beauish
-beaut
+bedded
 bedewed
 bedfast
 bedight
@@ -385,9 +387,11 @@ beige
 belated
 belgic
 bellied
+belted
 bemazed
 bemused
-bending
+bended
+bendy
 benefic
 benign
 benzal
@@ -396,11 +400,13 @@ berried
 bespoke
 best
 bestead
+bested
 bestial
 better
 betting
 beveled
 biafran
+biased
 bibbed
 bifocal
 bifold
@@ -410,6 +416,7 @@ biggest
 biggish
 bigoted
 bilious
+billed
 billion
 billowy
 bilobed
@@ -427,12 +434,14 @@ bitless
 bitonal
 bitten
 bitter
+bitty
 bizarre
 black
 bladed
-blah
+blae
 blame
 blamed
+bland
 blaring
 blasted
 blatant
@@ -440,10 +449,12 @@ blate
 blazing
 bleak
 blear
+bleary
 blended
 blessed
 blest
 blind
+blinded
 blithe
 bloated
 blocked
@@ -456,9 +467,12 @@ bloomed
 bloomy
 blotchy
 blotto
+blotty
 blown
 blowsy
 blowzed
+blowzy
+blubber
 blue
 bluff
 bluish
@@ -466,19 +480,22 @@ blunt
 blunted
 blurred
 blurry
+boarish
 bobbery
 bodily
-boding
+boggy
 bogus
 boiled
-boiling
 bolted
 bond
+bonded
 boned
 boney
 bonism
 bonkers
 bonnie
+bonny
+bony
 booked
 bookish
 booming
@@ -491,8 +508,10 @@ bored
 boring
 bosker
 bosky
+bosom
 bosomed
 bosomy
+bossy
 botched
 botchy
 both
@@ -502,6 +521,7 @@ boulle
 bouncy
 bounded
 bounden
+bousy
 bowed
 bowing
 boxed
@@ -512,15 +532,20 @@ braced
 braided
 brainy
 braised
+braky
 braless
 brambly
 branchy
+branded
+branny
 brash
+brashy
 brassy
 bratty
 brave
 braving
 braw
+brawny
 brazen
 breathy
 breezy
@@ -543,9 +568,12 @@ broke
 broken
 bronzed
 bronzy
+brood
 broomy
 brown
 browned
+browny
+bruised
 brumal
 brumous
 brushed
@@ -555,6 +583,7 @@ brut
 brutal
 brutish
 buccal
+bucked
 buckish
 budding
 budless
@@ -565,14 +594,17 @@ built
 buirdly
 bulbous
 bulging
-bulk
+bulgy
 bulky
 bull
 bullate
+bullied
 bullish
+bully
 bumpy
 bunched
 bunchy
+bungled
 bunted
 buoyant
 burghal
@@ -584,8 +616,8 @@ burman
 burned
 burning
 burnt
+burred
 burry
-burst
 bushed
 bushy
 busied
@@ -608,32 +640,37 @@ cade
 cadent
 cadgy
 cagey
+cagy
 calando
 calced
 called
 callous
 callow
 calm
-calming
+calmy
 calved
 campy
 canary
 candent
 candid
+candied
 canned
 canny
 canonic
 canopic
 canted
 canty
+cany
 capable
 caped
 capital
+capped
 carabid
 caramel
 cardiac
 careful
 caring
+carious
 carking
 carlish
 carmine
@@ -656,6 +693,7 @@ caudal
 cauld
 cauline
 caulked
+causal
 cedarn
 censual
 centred
@@ -673,6 +711,7 @@ chaffy
 chained
 chalky
 chance
+chancy
 changed
 chanted
 chaotic
@@ -680,6 +719,7 @@ chapped
 charged
 charmed
 charry
+chary
 chasmal
 chasmed
 chasmic
@@ -689,6 +729,8 @@ chatty
 cheap
 checked
 checky
+cheeked
+cheeky
 cheerly
 cheery
 cheesed
@@ -702,7 +744,9 @@ chiefly
 childly
 chill
 chilled
+chin
 chintzy
+chipped
 chipper
 chippy
 chirk
@@ -712,13 +756,16 @@ chocker
 choice
 choked
 chokey
-choking
 choky
 choosey
+choosy
+chopped
+choppy
 choreic
 chorial
 chromic
 chubby
+chuffy
 chummy
 chunky
 churchy
@@ -738,6 +785,7 @@ clad
 clamant
 clammy
 clarino
+classy
 clastic
 clavate
 clawed
@@ -755,9 +803,11 @@ cliffy
 clingy
 clipped
 cliquey
+cliquy
 clitic
 cloacal
 cloaked
+cloddy
 clogged
 cloggy
 close
@@ -795,8 +845,11 @@ cold
 coldish
 colicky
 collect
+colly
 color
+colory
 colour
+coltish
 comal
 comate
 combed
@@ -822,8 +875,8 @@ connate
 convex
 cooing
 cooked
-cooking
 cool
+cooled
 coolish
 copied
 copious
@@ -832,6 +885,7 @@ coral
 cordate
 corded
 corked
+corking
 corky
 corned
 cornual
@@ -852,9 +906,11 @@ coursed
 courtly
 couth
 couthie
+couthy
 covered
 coveted
 cowed
+cowled
 coxal
 coyish
 cozy
@@ -865,9 +921,10 @@ cragged
 craggy
 cramped
 cranky
-crash
 crass
+craved
 crawly
+crazed
 crazy
 creaky
 creamy
@@ -876,6 +933,7 @@ creasy
 credent
 creepy
 crenate
+cressy
 crested
 cricoid
 crimean
@@ -888,6 +946,7 @@ crinkly
 crinose
 crispy
 croaky
+crocked
 cronk
 crooked
 cropped
@@ -902,6 +961,7 @@ crumby
 crummy
 crunchy
 crushed
+crusted
 crusty
 crying
 cryptal
@@ -931,6 +991,7 @@ curling
 curly
 current
 currish
+cursed
 cursing
 cursive
 cursory
@@ -939,6 +1000,7 @@ curt
 curtal
 curtate
 curule
+curved
 curving
 curvy
 cushy
@@ -948,6 +1010,7 @@ cussed
 custom
 cutcha
 cute
+cutty
 cyan
 cyanic
 cyclic
@@ -955,6 +1018,7 @@ cyclone
 cymoid
 cymose
 cynical
+cystoid
 dabbled
 daffier
 daffy
@@ -967,9 +1031,9 @@ damn
 damning
 damp
 dampish
-dancing
 dang
 danged
+dank
 dapper
 dapple
 dappled
@@ -977,7 +1041,7 @@ daring
 dark
 darned
 darting
-dash
+dashed
 dashing
 datable
 dated
@@ -987,7 +1051,6 @@ dauby
 daunted
 dawn
 daylong
-daytime
 dazed
 dazzled
 deaf
@@ -1012,8 +1075,8 @@ defaced
 defiant
 defiled
 defined
+deft
 defunct
-degree
 deific
 deiform
 deject
@@ -1041,6 +1104,7 @@ dernier
 desired
 desmoid
 deuced
+deviled
 devious
 devoid
 devoted
@@ -1057,19 +1121,21 @@ digital
 diglot
 dilated
 dilute
+diluted
 dime
 dimmed
 dimmest
 dimming
 dimply
+dinge
 dingy
-dink
 dinkum
 diplex
 dipnoan
 dipped
 dippier
 dippy
+dire
 direct
 direful
 dirty
@@ -1079,6 +1145,7 @@ dishy
 dismal
 distal
 distant
+distent
 distyle
 disused
 diurnal
@@ -1086,7 +1153,9 @@ diverse
 divided
 dizzied
 dizzy
+doable
 docile
+docked
 doddery
 dodgy
 dogged
@@ -1108,16 +1177,20 @@ donnish
 donsie
 doped
 dopey
+dopy
 dormant
 dormie
 dormy
 dorsal
+dorty
 dosed
 dotal
 dotier
 dotiest
 doting
+dotted
 dotty
+doty
 double
 doubled
 douce
@@ -1139,6 +1212,7 @@ dozy
 drab
 draffy
 drafty
+drained
 drastic
 dratted
 drawn
@@ -1147,9 +1221,13 @@ dreaded
 dreamed
 dreamy
 drear
+dreary
+dree
+dreggy
 dressed
 dressy
 dried
+drifty
 drilled
 drippy
 driven
@@ -1159,6 +1237,7 @@ droll
 dronish
 droopy
 dropped
+drossy
 drouthy
 drowned
 drowsy
@@ -1168,6 +1247,7 @@ drumly
 drunk
 drunken
 drusian
+drying
 dual
 dubious
 duckie
@@ -1210,7 +1290,6 @@ eastern
 easy
 eaten
 eath
-eating
 ebon
 ebony
 ecbolic
@@ -1318,7 +1397,6 @@ etched
 eternal
 eterne
 etesian
-ethic
 ethical
 evasive
 even
@@ -1356,9 +1434,6 @@ fadable
 faddish
 faddy
 faded
-fading
-faerie
-faery
 failed
 failing
 faint
@@ -1379,12 +1454,10 @@ farand
 faraway
 farci
 farming
-farrow
 fascial
 fast
 fatal
 fateful
-fatigue
 fatless
 fatter
 fattest
@@ -1398,15 +1471,12 @@ favored
 fawning
 feal
 fearful
-feat
 fecund
 feeble
 feeling
 feigned
 feisty
 fell
-fellow
-felon
 felsic
 felted
 fenian
@@ -1424,7 +1494,6 @@ fetial
 fetid
 fevered
 fibered
-fibroid
 fibrous
 fibular
 fickle
@@ -1529,7 +1598,6 @@ folding
 foliar
 foliate
 foliose
-folk
 folkish
 folksy
 fond
@@ -1572,7 +1640,6 @@ frayed
 freaky
 freckly
 freed
-freeing
 fremd
 frenchy
 fresh
@@ -1590,7 +1657,6 @@ frizzly
 frizzy
 frogged
 froggy
-frolic
 fronded
 front
 frore
@@ -1644,7 +1710,6 @@ gaga
 gainful
 gainly
 gaited
-gala
 galeate
 galenic
 galling
@@ -1713,7 +1778,6 @@ glad
 glaikit
 glairy
 glaived
-glare
 glaring
 glassed
 glassy
@@ -1900,7 +1964,6 @@ hearted
 hearty
 heated
 heathy
-heaving
 heavy
 hectic
 hedged
@@ -1939,7 +2002,6 @@ hirable
 hired
 hirsute
 hispid
-hissing
 histie
 histoid
 hitchy
@@ -1958,7 +2020,6 @@ homing
 honest
 honeyed
 honied
-honour
 hooded
 hoofed
 hooked
@@ -1970,7 +2031,6 @@ hornish
 horrid
 horsey
 horsier
-hotfoot
 hotter
 hottest
 hotting
@@ -1980,7 +2040,6 @@ hoven
 huddled
 hued
 hueless
-huffing
 huffish
 huffy
 huge
@@ -1993,7 +2052,6 @@ humdrum
 humeral
 humid
 hummel
-humming
 humpier
 hunched
 hundred
@@ -2001,7 +2059,6 @@ hung
 hungry
 hunky
 hunnish
-hurling
 hurt
 hurtful
 hushed
@@ -2023,7 +2080,6 @@ identic
 idiotic
 idle
 idled
-idling
 idyllic
 iffy
 igneous
@@ -2084,7 +2140,6 @@ inmost
 innate
 inner
 inphase
-inrush
 insane
 inshore
 insipid
@@ -2110,13 +2165,10 @@ ireful
 irenic
 irksome
 ironed
-irony
 isiac
 islamic
-isogamy
 isolate
 issuant
-itching
 itchy
 iterant
 ivied
@@ -2126,7 +2178,6 @@ jadish
 jagged
 jaggy
 jailed
-jainism
 jake
 jalapic
 jammed
@@ -2176,7 +2227,6 @@ jugate
 juicy
 jumbled
 jumbo
-jumping
 jumpy
 junked
 jural
@@ -2241,7 +2291,6 @@ laith
 lakier
 lakiest
 laky
-lamaism
 lambent
 lame
 laminar
@@ -2285,7 +2334,6 @@ leafy
 leaking
 leal
 leaning
-leaping
 learned
 leased
 least
@@ -2298,7 +2346,6 @@ legged
 legible
 legit
 legless
-leisure
 lemnian
 lemony
 lengthy
@@ -2387,7 +2434,6 @@ londony
 lone
 lonely
 long
-longing
 longish
 looking
 looped
@@ -2437,8 +2483,6 @@ lustral
 lustred
 luteous
 luxe
-luxury
-lying
 lyncean
 lyrate
 lyric
@@ -2461,8 +2505,6 @@ makable
 malefic
 malign
 malty
-manchu
-manchus
 maned
 manful
 mangled
@@ -2473,7 +2515,6 @@ mannish
 mantic
 mantled
 many
-maoism
 marbled
 mardy
 marked
@@ -2511,7 +2552,6 @@ meaning
 measly
 meatal
 meaty
-medal
 mediate
 medical
 meek
@@ -2535,7 +2575,6 @@ mesne
 metopic
 miasmal
 miasmic
-mickle
 micro
 midian
 midmost
@@ -2558,7 +2597,6 @@ minded
 mindful
 mingy
 minikin
-minim
 minimal
 minus
 minute
@@ -2593,7 +2631,6 @@ monacid
 mondial
 moneyed
 monied
-monism
 monkish
 mono
 monodic
@@ -2634,7 +2671,6 @@ muggy
 muley
 mulish
 mundane
-murk
 murky
 murrey
 muscid
@@ -2667,7 +2703,6 @@ native
 natty
 natural
 naughty
-neap
 neaped
 near
 nearby
@@ -2775,7 +2810,6 @@ ochre
 ocker
 ocreate
 octadic
-octave
 octuple
 odious
 odorous
@@ -2853,7 +2887,6 @@ overarm
 overdue
 overfar
 overfed
-overrun
 oversea
 overt
 ovidian
@@ -2906,7 +2939,6 @@ parol
 part
 parted
 partite
-party
 passant
 passed
 passing
@@ -2939,7 +2971,6 @@ peevish
 pelitic
 peloric
 peltate
-pelting
 pendent
 pending
 penned
@@ -2949,7 +2980,6 @@ pensive
 pent
 peopled
 peppery
-percent
 perdu
 perfect
 perfumy
@@ -3023,10 +3053,8 @@ planned
 planted
 plated
 platier
-play
 played
 playful
-playing
 pleased
 plebby
 pledged
@@ -3132,7 +3160,6 @@ puckery
 puddly
 puerile
 puffed
-puffing
 puffy
 puggy
 puisne
@@ -3140,7 +3167,6 @@ puling
 pulled
 pulpy
 pulsed
-pulsing
 pungent
 puny
 pupal
@@ -3150,7 +3176,6 @@ purpure
 pursy
 pushed
 pushful
-pushing
 pushto
 pushy
 putrid
@@ -3168,7 +3193,6 @@ quaking
 quaky
 quality
 quare
-quartic
 quasi
 quavery
 queasy
@@ -3188,7 +3212,6 @@ rabic
 rabid
 racemed
 racemic
-racing
 racking
 racy
 raddled
@@ -3234,7 +3257,6 @@ ratty
 raucous
 raunchy
 ravaged
-raving
 rawish
 razed
 ready
@@ -3274,7 +3296,6 @@ rested
 restful
 resting
 restive
-retail
 retial
 retiary
 retired
@@ -3305,7 +3326,6 @@ rident
 ridged
 ridgier
 ridgy
-riding
 rife
 rifled
 rigid
@@ -3353,7 +3373,6 @@ rotate
 rotated
 rotted
 rotten
-rotting
 rotund
 rouged
 rough
@@ -3370,7 +3389,6 @@ rubbly
 rubied
 rubify
 rubious
-rubric
 ruby
 ruddy
 rude
@@ -3395,7 +3413,6 @@ runny
 runtish
 runty
 rushed
-rushing
 rushy
 russky
 rust
@@ -3410,7 +3427,6 @@ sacred
 saddled
 sagging
 said
-sailing
 sainted
 saiva
 salable
@@ -3447,11 +3463,9 @@ savable
 saved
 saving
 savoury
-savvy
 saxonic
 sayable
 scalar
-scald
 scaldic
 scalled
 scaly
@@ -3481,7 +3495,6 @@ scruffy
 scummy
 scungy
 scurfy
-scurry
 scutate
 sealed
 seamed
@@ -3504,7 +3517,6 @@ seeable
 seeded
 seedy
 seeing
-seeking
 seely
 seeming
 seemly
@@ -3553,7 +3565,6 @@ shady
 shagged
 shaggy
 shaken
-shaking
 shaky
 shamed
 shaped
@@ -3651,7 +3662,6 @@ skyward
 slaggy
 slaked
 slangy
-slant
 slanted
 slapped
 slashed
@@ -3720,7 +3730,6 @@ sniffy
 snobby
 snooty
 snoozy
-snoring
 snorty
 snouted
 snowy
@@ -3729,7 +3738,6 @@ snuff
 snuffly
 snugger
 soaked
-soaking
 soapy
 soaring
 sober
@@ -3754,7 +3762,6 @@ songful
 sonic
 sonsie
 sonsy
-sooth
 sooty
 sopping
 soprano
@@ -3814,7 +3821,6 @@ spoken
 spongy
 spooky
 spoony
-sport
 spotted
 spotty
 sprawly
@@ -3892,7 +3898,6 @@ stoical
 stolen
 stolid
 stone
-stoned
 stopped
 storied
 stormy
@@ -3916,7 +3921,6 @@ subdued
 subfusc
 sublime
 such
-sucking
 sudden
 suited
 sullen
@@ -3986,7 +3990,6 @@ trade
 trained
 treated
 trepid
-trial
 tried
 triple
 troy
@@ -4032,7 +4035,6 @@ varying
 vast
 very
 vibrant
-vice
 vicious
 violent
 viral
@@ -4055,7 +4057,6 @@ wasted
 weak
 wearing
 welcome
-welfare
 white
 whitish
 whole
@@ -4093,4 +4094,3 @@ yummy
 zealous
 zonal
 zonary
-zoning

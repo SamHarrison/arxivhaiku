@@ -1,5 +1,5 @@
-declare const ADJECTIVES_SHA256: "34d4edb55d168968dc9b4018a745633b3c782048cfdb99d93b586d8fc36ba905";
-declare const NOUNS_SHA256: "965033026a676a90bcc7315a55fbd149e4d6dd55d03781a4eb77ec6bbd41ba35";
+declare const ADJECTIVES_SHA256: "ffec07d411421cb6e47c6311c2d7d77dddbc23c7d8bce2da926bea2d432df992";
+declare const NOUNS_SHA256: "e3a439f20fe4bff99ebd51e13170b69d017460c6c55d20481726e0a755c06c3c";
 
 /**
  * arxivhaiku.codec — alias generation and canonical-ID bijection.
@@ -117,6 +117,6 @@ declare class Haikunator {
  * See https://github.com/SamHarrison/arxivhaiku for the full README.
  */
 
-declare const VERSION: "1.0.1";
+declare const VERSION: "1.0.2";
 
 export { ADJECTIVES_SHA256, ADJ_BITS, ADJ_COUNT, CANON_BITS, CANON_CHARS, CANON_MAX, Haikunator, type HaikunatorOptions, InvalidAliasError, InvalidCanonicalError, NOUNS_SHA256, NOUN_BITS, NOUN_COUNT, VERSION, decode, decodeCrockford, encode, encodeCrockford, haiku, haikuCrockford, listAdjectives, listNouns };

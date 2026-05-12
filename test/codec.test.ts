@@ -229,12 +229,16 @@ describe("bijection", () => {
     expect(() => encode(1.5)).toThrow(InvalidCanonicalError);
   });
 
-  test("known stable value (cross-checked against Python)", () => {
-    // From the Python implementation:
-    //   encode(1234567)  === 'alpine-pixel'
-    //   decode('alpine-pixel') === 1234567
-    expect(encode(1234567)).toBe("alpine-pixel");
-    expect(decode("alpine-pixel")).toBe(1234567);
+  test("known stable values (cross-checked against Python)", () => {
+    // Cross-language sanity checks. These should ALSO produce the same
+    // strings in the Python implementation — if they ever diverge, one
+    // of the two ports has drifted from the shared wordlists.
+    // Values valid for arxivhaiku v1.0.2 wordlists (SHA-pinned in
+    // dist/index.d.ts as ADJECTIVES_SHA256 / NOUNS_SHA256).
+    expect(encode(0)).toBe("aaronic-aalii");
+    expect(encode(1234567)).toBe("alpine-pitprop");
+    expect(encode(33554431)).toBe("zonary-zoril");
+    expect(decode("alpine-pitprop")).toBe(1234567);
   });
 });
 
@@ -295,9 +299,12 @@ describe("Crockford Base32", () => {
     }
   });
 
-  test("known stable value", () => {
-    // From the Python implementation: encodeCrockford(1234567) === '15NM7'
+  test("known stable values (Crockford form is wordlist-independent)", () => {
+    // Crockford encoding doesn't depend on the wordlists — just integer
+    // → base 32 → 5 chars. These values are stable across all versions.
+    expect(encodeCrockford(0)).toBe("00000");
     expect(encodeCrockford(1234567)).toBe("15NM7");
+    expect(encodeCrockford(33554431)).toBe("ZZZZZ");
     expect(decodeCrockford("15NM7")).toBe(1234567);
   });
 });

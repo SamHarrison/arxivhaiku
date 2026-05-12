@@ -1,5 +1,71 @@
 # CHANGELOG
 
+## v1.0.2 — 2026-05-12
+
+Patch release. Removes 116 leaks across three categories caught by
+post-v1.0.1 sampling, and adds dedicated web-app integration
+documentation.
+
+### Removed from adjective pool (108)
+
+**99 abstract nouns mistagged as adjectives.** The `simple_adjectives`
+source (Project Gutenberg POS-tagged corpus) labels some words as
+adjectives that WordNet treats only as abstract nouns. Triaged by
+scanning for adj-pool words with no WordNet ADJ synset whose noun
+lexnames are entirely abstract (noun.cognition, noun.act, noun.state,
+noun.event, etc.):
+
+`atheism, atomism, attack, bawling, beaut, bending, blah, boding,
+boiling, bulk, burst, calming, choking, cooking, crash, dancing, dash,
+daytime, degree, dink, eating, ethic, fading, faerie, faery, farrow,
+fatigue, feat, fellow, felon, fibroid, folk, freeing, frolic, gala,
+glare, heaving, hissing, honour, hotfoot, huffing, humming, hurling,
+idling, inrush, irony, isogamy, itching, jainism, jumping, lamaism,
+leaping, leisure, longing, luxury, lying, manchu, manchus, maoism,
+medal, mickle, minim, monism, murk, neap, octave, overrun, party,
+pelting, percent, play, playing, puffing, pulsing, pushing, quartic,
+racing, raving, retail, riding, rotting, rubric, rushing, sailing,
+savvy, scald, scurry, seeking, shaking, slant, snoring, soaking, sooth,
+sport, sucking, trial, vice, welfare, zoning`
+
+**Kept (canonical Heroku-style noun-modifiers):** `autumn, summer,
+winter, dawn, morning, aqua, ecru, sheen, dapple, slub, chill`.
+
+**9 drug references (Schedule-I / addiction terms) removed from noun
+pool:** `heroin, hashish, ganja, mescal, peyote, opium, reefer, valium,
+ritalin, junkie, stoned, bhang, betel, pseud`.
+
+**5 weapons/chemical agents removed from noun pool:** `napalm, bayonet,
+missile, cyanide, arsenic`. (Kept multi-meaning words like `barrel`,
+`trigger`, `venom` that have benign primary meanings.)
+
+### Documentation
+
+- `docs/WEBAPP.md` — new dedicated integration guide for Next.js, Drizzle,
+  Vercel Edge, Server Actions, Route Handlers, middleware, ID
+  allocation strategies, runtime considerations, common pitfalls.
+
+### File hashes
+
+| File             | SHA-256 |
+|------------------|---------|
+| `adjectives.txt` | `ffec07d411421cb6e47c6311c2d7d77dddbc23c7d8bce2da926bea2d432df992` |
+| `nouns.txt`      | `e3a439f20fe4bff99ebd51e13170b69d017460c6c55d20481726e0a755c06c3c` |
+
+### Pair audit final result
+
+- 50,000 random adj-noun pairs audited
+- Flag rate consistent with v1.0.1 (~0.04%) — remaining flags are
+  cross-boundary substring false positives only.
+
+### Immutability rule activates from v1.0.2 forward
+
+v1.0.0, v1.0.1, and v1.0.2 are all pre-production patches that broke
+the `docs/EXTENSION.md` immutability rule. From v1.0.2 onward, the rule
+applies: future patches will only **append** new words, never remove or
+reindex. Consumers issuing aliases in production after v1.0.2 can rely
+on long-term stability.
+
 ## v1.0.1 — 2026-05-12
 
 Patch release. Removes six demographic/religious terms that escaped

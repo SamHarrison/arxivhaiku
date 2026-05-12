@@ -1,6 +1,6 @@
 {
   "name": "arxivhaiku",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Heroku-haikunator-style two-word identifiers (4,096 adjectives × 8,192 nouns) with a clean bijection to 25-bit canonical / 5-char Crockford Base32.",
   "keywords": [
     "haikunator",

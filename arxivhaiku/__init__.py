@@ -11,6 +11,10 @@ Quick start:
     >>> from arxivhaiku import encode, decode
     >>> alias = encode(0x1234567)         # canonical → alias
     >>> canon = decode('frosty-meadow')   # alias → canonical (round-trips)
+
+For web app integration (Django, Flask, FastAPI), see the patterns in
+docs/WEBAPP.md — they map directly to the Python API (the parameter
+names and behavior are identical to the TypeScript port documented there).
 """
 
 from arxivhaiku.codec import (
@@ -43,4 +47,4 @@ __all__ = [
     "list_nouns",
 ]
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"

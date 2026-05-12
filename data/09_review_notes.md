@@ -6,7 +6,7 @@ CLAUDE.md §Step 9 mandates a synchronous human reviewer at this checkpoint. The
   2. Manual sampling of random adj/noun/pair draws.
   3. A hand-curated removal list grouped by failure mode (substring profanity carriers, demonym/religion leaks, medical/biology jargon, brand residue, obscure dialect).
 
-Total removals: 291
+Total removals: 408
 
 ## Removed by category
 

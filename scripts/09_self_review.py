@@ -134,6 +134,41 @@ HARD_REMOVE_4_7 = {
     "gentile",  # non-Jew; can be neutral but too easy to misread
     "metis",    # Canadian indigenous group (proper noun, demonym)
     "paddy",    # Irish ethnic slur (also rice field; risky in pairings)
+
+    # v1.0.2 patch: abstract nouns mistagged as adjectives by the
+    # `simple_adjectives` source (Project Gutenberg POS-tagged corpus has
+    # noisy adj labels for words with no WordNet ADJ synset). Triaged by
+    # checking WordNet noun lexnames: words whose lexnames are entirely
+    # abstract (noun.cognition, noun.act, noun.state, noun.event, etc.)
+    # AND have no ADJ synset are mistagged. Kept canonical Heroku-style
+    # noun-modifiers (autumn, summer, winter, dawn, morning, aqua, ecru,
+    # sheen, dapple, slub, chill). Dropped 99 others:
+    "atheism", "atomism", "attack", "bawling", "beaut", "bending", "blah",
+    "boding", "boiling", "bulk", "burst", "calming", "choking", "cooking",
+    "crash", "dancing", "dash", "daytime", "degree", "dink", "eating",
+    "ethic", "fading", "faerie", "faery", "farrow", "fatigue", "feat",
+    "fellow", "felon", "fibroid", "folk", "freeing", "frolic", "gala",
+    "glare", "heaving", "hissing", "honour", "hotfoot", "huffing",
+    "humming", "hurling", "idling", "inrush", "irony", "isogamy",
+    "itching", "jainism", "jumping", "lamaism", "leaping", "leisure",
+    "longing", "luxury", "lying", "manchu", "manchus", "maoism", "medal",
+    "mickle", "minim", "monism", "murk", "neap", "octave", "overrun",
+    "party", "pelting", "percent", "play", "playing", "puffing", "pulsing",
+    "pushing", "quartic", "racing", "raving", "retail", "riding", "rotting",
+    "rubric", "rushing", "sailing", "savvy", "scald", "scurry", "seeking",
+    "shaking", "slant", "snoring", "soaking", "sooth", "sport", "sucking",
+    "trial", "vice", "welfare", "zoning",
+
+    # v1.0.2 patch: drug references (Schedule-I / addiction terms)
+    "heroin", "hashish", "ganja", "mescal", "peyote", "opium", "reefer",
+    "valium", "ritalin", "junkie", "stoned",
+    "bhang", "betel",  # cannabis (Hindi); betel-quid stimulant
+    "pseud",  # slang for pretentious person (mild but obscure)
+
+    # v1.0.2 patch: weapons / chemical agents (the obvious ones; we keep
+    # multi-meaning words like 'barrel', 'trigger', 'venom' that have
+    # benign primary meanings)
+    "napalm", "bayonet", "missile", "cyanide", "arsenic",
 }
 
 HARD_REMOVE = HARD_REMOVE_4_7 | {

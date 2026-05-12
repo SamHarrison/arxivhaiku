@@ -92,13 +92,18 @@ needed if you want to *rebuild* the wordlists from source. See
 
 ## Install (TypeScript / JavaScript)
 
+> **Web app integration?** Jump straight to
+> **[`docs/WEBAPP.md`](docs/WEBAPP.md)** for the full Next.js + Drizzle
+> integration guide (Server Actions, Route Handlers, middleware,
+> Edge runtime, ID allocation strategies, common pitfalls).
+
 Install directly from GitHub — no npm publish required. The TS package
 lives at the repo root and ships its built `dist/` so consumers get a
 ready-to-use ESM + CJS module with full type declarations.
 
 ```bash
 # pin to a tagged release (recommended for production)
-pnpm add github:SamHarrison/arxivhaiku#semver:^1.0.1
+pnpm add github:SamHarrison/arxivhaiku#semver:^1.0.2
 
 # or pin to a specific commit
 pnpm add github:SamHarrison/arxivhaiku#63542b6
@@ -147,26 +152,36 @@ console.log(VERSION, ADJECTIVES_SHA256, NOUNS_SHA256);
 
 ### Next.js usage notes
 
-- Codec is sync, deterministic, zero I/O — call from Server Components,
+**For a complete integration guide — including Drizzle schema, Server
+Actions, Route Handlers, middleware, ID allocation strategies, runtime
+considerations, and a full reference Next.js example — see
+[`docs/WEBAPP.md`](docs/WEBAPP.md).**
+
+TL;DR pattern:
+
+```ts
+// app/items/[alias]/page.tsx
+import { decode, InvalidAliasError } from "arxivhaiku";
+import { notFound } from "next/navigation";
+
+export default async function Page({ params }: { params: Promise<{ alias: string }> }) {
+  const { alias } = await params;
+  let id: number;
+  try { id = decode(alias); }
+  catch (e) { if (e instanceof InvalidAliasError) notFound(); throw e; }
+  const item = await db.query.items.findFirst({ where: eq(items.id, id) });
+  if (!item) notFound();
+  return <ItemView item={item} />;
+}
+```
+
+Key points:
+- Codec is sync, deterministic, zero I/O — works in Server Components,
   Server Actions, Route Handlers, middleware, or Client Components.
 - For Edge runtime, add `export const runtime = 'edge'` to the route file.
-- For URL routing, recommended pattern is `/items/[alias]`:
-  ```ts
-  import { decode, InvalidAliasError } from "arxivhaiku";
-  import { notFound } from "next/navigation";
-
-  export default async function Page({ params }: { params: Promise<{ alias: string }> }) {
-    const { alias } = await params;
-    let id: number;
-    try { id = decode(alias); }
-    catch (e) { if (e instanceof InvalidAliasError) notFound(); throw e; }
-    const item = await db.query.items.findFirst({ where: eq(items.id, id) });
-    if (!item) notFound();
-    return <ItemView item={item} />;
-  }
-  ```
-- For Drizzle, store the canonical as `integer` (PostgreSQL `INTEGER`,
-  4 bytes). See [Storage and URL patterns](#storage-and-url-patterns).
+- Store the canonical as `INTEGER` (4 bytes); reconstruct the alias on
+  read via `encode(row.id)`. See
+  [Storage and URL patterns](#storage-and-url-patterns).
 
 ## Quick start
 
@@ -514,9 +529,13 @@ The shipped `adjectives.txt` and `nouns.txt` are SHA-256-pinned in
 
 ```bash
 sha256sum adjectives.txt nouns.txt
-# adjectives.txt:  34d4edb55d168968dc9b4018a745633b3c782048cfdb99d93b586d8fc36ba905
-# nouns.txt:       965033026a676a90bcc7315a55fbd149e4d6dd55d03781a4eb77ec6bbd41ba35
+# adjectives.txt:  ffec07d411421cb6e47c6311c2d7d77dddbc23c7d8bce2da926bea2d432df992
+# nouns.txt:       e3a439f20fe4bff99ebd51e13170b69d017460c6c55d20481726e0a755c06c3c
 ```
+
+The SHA-256 of the shipped wordlists is also available at runtime as
+the `ADJECTIVES_SHA256` and `NOUNS_SHA256` exports in both packages,
+so you can verify wordlist identity in deploy-time smoke tests.
 
 **Caveats** ([honest caveats below](#honest-caveats)) — no filter is
 perfect. If your application surfaces aliases to users in safety-critical
@@ -615,6 +634,7 @@ data/
 
 # Documentation
 docs/
+  WEBAPP.md                    web app integration guide (Next.js+Drizzle)
   PROCESS.md                   build pipeline narrative
   SOURCES.md                   input wordlists + licenses
   STATISTICS.md                final pool characteristics

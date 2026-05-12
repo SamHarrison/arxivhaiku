@@ -374,7 +374,6 @@ arroyo
 arroyos
 arse
 arsenal
-arsenic
 arsine
 arsines
 arson
@@ -611,7 +610,6 @@ batwing
 bauble
 baulk
 bauxite
-bayonet
 bayou
 bazar
 bazooka
@@ -684,12 +682,10 @@ berth
 beryl
 besom
 betaine
-betel
 bethel
 bethels
 bevel
 bezel
-bhang
 bias
 biceps
 bicorn
@@ -1333,6 +1329,7 @@ celesta
 cell
 cellar
 cellars
+cello
 celom
 celtuce
 cembali
@@ -1456,6 +1453,7 @@ chiffon
 chignon
 child
 chile
+chili
 chilly
 chime
 chimney
@@ -1471,6 +1469,7 @@ chitin
 chitins
 chive
 chlamys
+chock
 chocs
 choices
 choir
@@ -1562,6 +1561,7 @@ clast
 clatter
 clause
 clavier
+claw
 claxon
 claxons
 clay
@@ -1586,6 +1586,7 @@ clip
 clique
 cloaca
 cloacas
+cloak
 clobber
 cloche
 cloches
@@ -1657,9 +1658,12 @@ coif
 coign
 coigne
 coignes
+coil
 coin
+coke
 cole
 colic
+collage
 collar
 college
 collet
@@ -1711,6 +1715,7 @@ condoms
 conduct
 conduit
 condyle
+cone
 coney
 confect
 confit
@@ -1808,6 +1813,7 @@ cottar
 cottars
 cotton
 cottons
+couch
 council
 count
 counter
@@ -2216,6 +2222,7 @@ dignity
 digoxin
 dilater
 dilemma
+dill
 diluent
 dimity
 dimmer
@@ -2224,6 +2231,7 @@ dimness
 dimple
 dimples
 dinar
+diner
 dinette
 dingbat
 dinghy
@@ -2298,6 +2306,7 @@ doll
 dollar
 dollars
 dollop
+dolly
 dolman
 dolmans
 dolmas
@@ -2388,6 +2397,7 @@ dropout
 dropper
 droshky
 drosky
+dross
 drove
 drudge
 drug
@@ -2478,6 +2488,7 @@ easter
 eatable
 eatage
 eater
+eatery
 eats
 eaves
 ebonite
@@ -2831,6 +2842,7 @@ file
 filer
 filet
 fillets
+filly
 film
 filter
 filters
@@ -2933,6 +2945,7 @@ flowers
 flue
 fluff
 fluid
+fluke
 flume
 flute
 flux
@@ -3116,7 +3129,6 @@ ganef
 gang
 ganglia
 gangway
-ganja
 ganoid
 gantry
 gaol
@@ -3582,7 +3594,6 @@ harrow
 harrows
 harvest
 hash
-hashish
 haslet
 haslets
 hasp
@@ -3675,7 +3686,6 @@ hermit
 hero
 heroes
 heroics
-heroin
 heroins
 heroism
 hessian
@@ -4074,7 +4084,6 @@ jungles
 junior
 juniper
 junk
-junkie
 junto
 jurist
 juror
@@ -4780,7 +4789,6 @@ merger
 merle
 merlon
 merlons
-mescal
 mescals
 mesh
 meson
@@ -4852,7 +4860,6 @@ mirth
 misery
 miso
 miss
-missile
 mission
 missy
 mistake
@@ -5037,7 +5044,6 @@ nance
 nandu
 nankeen
 nanny
-napalm
 napalms
 nape
 napery
@@ -5294,7 +5300,6 @@ ophryon
 opiate
 opiates
 opinion
-opium
 opossum
 opsin
 opsonin
@@ -5643,7 +5648,6 @@ pets
 petunia
 pewit
 pewters
-peyote
 peyotes
 phaeton
 phage
@@ -6039,7 +6043,6 @@ prune
 pruner
 pruners
 prys
-pseud
 psoas
 psychic
 psyop
@@ -6315,7 +6318,6 @@ redox
 reducer
 reed
 reef
-reefer
 reefers
 reel
 reentry
@@ -6502,7 +6504,6 @@ riser
 risk
 risotto
 rissole
-ritalin
 rival
 river
 rivet
@@ -7910,7 +7911,6 @@ vacua
 vacuum
 vagus
 valet
-valium
 valley
 valor
 valse
