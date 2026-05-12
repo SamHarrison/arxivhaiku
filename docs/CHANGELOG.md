@@ -1,5 +1,24 @@
 # CHANGELOG
 
+## v1.0.1 — 2026-05-12
+
+Patch release. Removes six demographic/religious terms that escaped
+v1.0.0 filters and were caught during post-release alias sampling.
+
+Removed nouns: `gentile`, `goyim`, `hadji`, `kafir`, `metis`, `paddy`.
+
+Backfilled from the v1.0.0 overflow log; adjective pool unchanged.
+
+| File             | SHA-256 |
+|------------------|---------|
+| `adjectives.txt` | `34d4edb55d168968dc9b4018a745633b3c782048cfdb99d93b586d8fc36ba905` (unchanged) |
+| `nouns.txt`      | `965033026a676a90bcc7315a55fbd149e4d6dd55d03781a4eb77ec6bbd41ba35` |
+
+This patch breaks the immutability rule documented in EXTENSION.md
+because no production aliases had yet been issued from v1.0.0. Once
+v1.0.x is deployed, the immutability rule applies — future fixes must
+go through deprecation, not removal.
+
 ## v1.0.0 — 2026-05-12
 
 Initial release.

@@ -115,11 +115,14 @@ fumier	adj	self_review_step9
 gabby	adj	self_review_step9
 gargety	adj	self_review_step9
 gayal	noun	self_review_step9
+gentile	noun	self_review_step9
 gibbed	adj	self_review_step9
 gigot	noun	self_review_step9
+goyim	noun	self_review_step9
 groynes	noun	self_review_step9
 guimpe	noun	self_review_step9
 guttate	adj	self_review_step9
+hadji	noun	self_review_step9
 hadron	noun	self_review_step9
 harpoon	noun	self_review_step9
 hask	adj	self_review_step9
@@ -140,6 +143,7 @@ jasper	noun	self_review_step9
 jelled	adj	self_review_step9
 jirga	noun	self_review_step9
 junco	noun	self_review_step9
+kafir	noun	self_review_step9
 kasha	noun	self_review_step9
 kauri	noun	self_review_step9
 kelpie	noun	self_review_step9
@@ -183,6 +187,7 @@ measled	adj	self_review_step9
 menisci	noun	self_review_step9
 merino	noun	self_review_step9
 methyls	noun	self_review_step9
+metis	noun	self_review_step9
 minge	noun	self_review_step9
 mobcap	noun	self_review_step9
 mobcaps	noun	self_review_step9
@@ -208,6 +213,7 @@ onymous	adj	self_review_step9
 orlon	noun	self_review_step9
 ortho	adj	self_review_step9
 outbred	adj	self_review_step9
+paddy	noun	self_review_step9
 pandean	adj	self_review_step9
 pastil	noun	self_review_step9
 pelves	noun	self_review_step9

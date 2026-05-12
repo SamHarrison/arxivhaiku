@@ -625,6 +625,7 @@ bean
 beanbag
 beanie
 bear
+beard
 bearing
 beast
 beater
@@ -642,6 +643,7 @@ bedroll
 bedroom
 beds
 bedsit
+beech
 beef
 beehive
 beeper
@@ -989,6 +991,7 @@ browse
 brucine
 bruin
 brule
+brunch
 brush
 brute
 bubble
@@ -1014,6 +1017,7 @@ buhl
 build
 builder
 bulb
+bulge
 bulgur
 bulgurs
 bulla
@@ -1189,6 +1193,7 @@ canna
 cannery
 cannon
 cannula
+canoe
 canola
 canon
 canopy
@@ -3179,7 +3184,6 @@ genius
 genoise
 genome
 genre
-gentile
 genua
 geode
 geology
@@ -3334,7 +3338,6 @@ gouge
 goulash
 gourd
 gown
-goyim
 gpss
 grace
 grade
@@ -3490,7 +3493,6 @@ hacker
 hackney
 hacksaw
 haddock
-hadji
 hadrons
 haem
 hafnium
@@ -4083,7 +4085,6 @@ kabob
 kachina
 kadai
 kaffirs
-kafir
 kail
 kainite
 kale
@@ -4791,7 +4792,6 @@ meter
 methane
 methods
 methyl
-metis
 metro
 miaou
 miasm
@@ -5411,7 +5411,6 @@ padding
 paddle
 paddles
 paddock
-paddy
 padlock
 padre
 paean
@@ -7824,6 +7823,7 @@ tulip
 tulle
 tumble
 tuna
+tuner
 tunic
 tunnel
 tunny

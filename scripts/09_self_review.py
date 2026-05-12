@@ -127,6 +127,13 @@ HARD_REMOVE_4_7 = {
     "imam", "imams",
     "deity", "swami",
     "yoga", "yogi", "yogic", "yogis",  # not problematic but loanword-heavy
+    # v1.0.1 patch: ethnic/religious demographic terms found in shipped v1.0.0
+    "goyim",    # Yiddish; non-Jews, frequently pejorative
+    "hadji",    # Arabic; one who's done the hajj, used as US-military slur
+    "kafir",    # Arabic; non-believer, generally pejorative
+    "gentile",  # non-Jew; can be neutral but too easy to misread
+    "metis",    # Canadian indigenous group (proper noun, demonym)
+    "paddy",    # Irish ethnic slur (also rice field; risky in pairings)
 }
 
 HARD_REMOVE = HARD_REMOVE_4_7 | {
