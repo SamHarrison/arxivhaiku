@@ -6,4 +6,14 @@ __pycache__/
 .venv/
 venv/
 build/
-dist/
+
+# Python build output (Python package uses arxivhaiku/data/ for runtime)
+# Note: TS dist/ IS committed so git-installs work without a build step.
+# We only exclude the source maps from git (large; regenerable via `pnpm run build`).
+dist/*.map
+
+# Node / TypeScript
+node_modules/
+*.tsbuildinfo
+.vitest-cache/
+coverage/

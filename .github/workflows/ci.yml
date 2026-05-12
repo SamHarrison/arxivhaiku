@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  typescript:
+    name: TypeScript (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ["18", "20", "22"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      # Regenerate wordlists.generated.ts and fail if it would diff. This
+      # catches a developer editing adjectives.txt/nouns.txt without
+      # regenerating, or vice versa — the two sources of truth must agree.
+      - name: Verify wordlists.generated.ts is up to date
+        run: |
+          node scripts/gen-wordlists.mjs
+          git diff --exit-code src/wordlists.generated.ts \
+            || (echo "::error::src/wordlists.generated.ts is stale. Run 'pnpm run gen' and commit." && exit 1)
+
+      - name: Typecheck
+        run: ./node_modules/.bin/tsc --noEmit
+
+      - name: Build
+        run: ./node_modules/.bin/tsup
+
+      - name: Test
+        run: ./node_modules/.bin/vitest run
+
+  python:
+    name: Python (3.${{ matrix.python }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["10", "11", "12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.${{ matrix.python }}"
+
+      - run: pip install -e .
+
+      - name: Run unit tests
+        run: python -m unittest discover tests

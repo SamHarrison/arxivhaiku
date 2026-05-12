@@ -25,10 +25,14 @@ between three forms of the same ID:
 
 ---
 
+The repo ships both a **Python** package and a **TypeScript** package
+backed by the same wordlist files. Use whichever fits your stack.
+
 ## Table of contents
 
 - [Why arxivhaiku?](#why-arxivhaiku)
-- [Install](#install)
+- [Install (Python)](#install-python)
+- [Install (TypeScript / JavaScript)](#install-typescript--javascript)
 - [Quick start](#quick-start)
 - [Library API](#library-api)
 - [CLI](#cli)
@@ -72,7 +76,7 @@ chosen ad-hoc. arxivhaiku provides:
   aliases are issued (immutability), only deprecated. v2 wordlists must
   be supersets of v1. See `docs/EXTENSION.md`.
 
-## Install
+## Install (Python)
 
 ```bash
 pip install -e .
@@ -85,6 +89,84 @@ integer arithmetic.
 (Build dependencies — `nltk`, `pandas`, `jellyfish`, `requests` — are only
 needed if you want to *rebuild* the wordlists from source. See
 [Reproducing the build](#reproducing-the-build).)
+
+## Install (TypeScript / JavaScript)
+
+Install directly from GitHub — no npm publish required. The TS package
+lives at the repo root and ships its built `dist/` so consumers get a
+ready-to-use ESM + CJS module with full type declarations.
+
+```bash
+# pin to a tagged release (recommended for production)
+pnpm add github:SamHarrison/arxivhaiku#semver:^1.0.1
+
+# or pin to a specific commit
+pnpm add github:SamHarrison/arxivhaiku#63542b6
+
+# or track master (development only)
+pnpm add github:SamHarrison/arxivhaiku
+```
+
+(Same syntax works with `npm add` or `yarn add`. The `#semver:` selector
+matches the latest tag satisfying the SemVer range.)
+
+Updating later:
+
+```bash
+# move to a newer tag
+pnpm up arxivhaiku
+```
+
+**Runtime targets supported:** Node ≥ 18, Vercel Edge, browsers, Deno,
+Bun. No filesystem I/O — wordlists are inlined into the bundle (~150KB
+ESM, gzips to ~25KB). No runtime dependencies.
+
+The TS package shares its `adjectives.txt` and `nouns.txt` with the
+Python package — a CI check fails if `src/wordlists.generated.ts` drifts
+from the canonical wordlist files, so the two packages can never get
+out of sync.
+
+```ts
+import { haiku, encode, decode, encodeCrockford, decodeCrockford } from "arxivhaiku";
+
+haiku();                          // 'frosty-meadow'
+encode(1234567);                  // 'alpine-pixel'
+decode("alpine-pixel");           // 1234567
+encodeCrockford(1234567);         // '15NM7'
+decodeCrockford("15NM7");         // 1234567
+
+// Class-based, optionally seeded (NOT for production IDs — predictable PRNG)
+import { Haikunator } from "arxivhaiku";
+const h = new Haikunator({ seed: 42 });
+h.haikunate();                    // reproducible with this seed
+
+// Verify shipped wordlist version
+import { ADJECTIVES_SHA256, NOUNS_SHA256, VERSION } from "arxivhaiku";
+console.log(VERSION, ADJECTIVES_SHA256, NOUNS_SHA256);
+```
+
+### Next.js usage notes
+
+- Codec is sync, deterministic, zero I/O — call from Server Components,
+  Server Actions, Route Handlers, middleware, or Client Components.
+- For Edge runtime, add `export const runtime = 'edge'` to the route file.
+- For URL routing, recommended pattern is `/items/[alias]`:
+  ```ts
+  import { decode, InvalidAliasError } from "arxivhaiku";
+  import { notFound } from "next/navigation";
+
+  export default async function Page({ params }: { params: Promise<{ alias: string }> }) {
+    const { alias } = await params;
+    let id: number;
+    try { id = decode(alias); }
+    catch (e) { if (e instanceof InvalidAliasError) notFound(); throw e; }
+    const item = await db.query.items.findFirst({ where: eq(items.id, id) });
+    if (!item) notFound();
+    return <ItemView item={item} />;
+  }
+  ```
+- For Drizzle, store the canonical as `integer` (PostgreSQL `INTEGER`,
+  4 bytes). See [Storage and URL patterns](#storage-and-url-patterns).
 
 ## Quick start
 
@@ -485,26 +567,34 @@ referenced it. See `docs/EXTENSION.md` for the full rules:
 ## Project layout
 
 ```
-arxivhaiku/                  ← Python package
+adjectives.txt               ← canonical wordlist (4,096 lines)
+nouns.txt                    ← canonical wordlist (8,192 lines)
+                               — the single source of truth, shared
+                                 by both packages.
+
+# Python package
+arxivhaiku/                  ← Python package source
   __init__.py                  public API
   codec.py                     bijection + RNG
   __main__.py                  CLI
-  data/
-    adjectives.txt             bundled copy of the wordlist
-    nouns.txt
+  data/                        bundled copy (auto-synced)
+pyproject.toml               ← Python build manifest
+tests/test_codec.py          ← 27 Python unit tests
 
-adjectives.txt               ← canonical wordlist (4,096 lines)
-nouns.txt                    ← canonical wordlist (8,192 lines)
+# TypeScript package
+src/                         ← TS package source
+  index.ts                     public API re-exports
+  codec.ts                     bijection + RNG
+  wordlists.generated.ts       ← AUTO-GENERATED from .txt files (committed)
+dist/                        ← built ESM + CJS + .d.ts (gitignored)
+package.json                 ← npm/pnpm manifest
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+scripts/gen-wordlists.mjs    ← regenerates wordlists.generated.ts
+test/codec.test.ts           ← 38 Vitest tests (mirrors Python suite)
 
-docs/
-  PROCESS.md                   build pipeline narrative
-  SOURCES.md                   input wordlists + licenses
-  STATISTICS.md                final pool characteristics
-  BLOCKLIST.md                 every dropped word + reason (~7.5K entries)
-  TONE.md                      subjective calls + reasoning
-  EXTENSION.md                 immutability + v2 rules
-  CHANGELOG.md                 release notes + SHA-256 pins
-
+# Build pipeline (Python)
 scripts/
   01_acquire.py                ← idempotent pipeline scripts;
   02_pos_tag.py                  re-run any time to verify the build.
@@ -516,24 +606,36 @@ scripts/
   08_pair_audit.py
   09_self_review.py
   10_finalize.py
-  quality_gates.py             14 acceptance checks
+  quality_gates.py             ← 14 acceptance checks
 
-data/                        ← pipeline intermediates (committed for audit)
+# Pipeline data (committed for audit)
+data/
   raw/                         downloaded source wordlists + SOURCES.md
   02_*.tsv … 10_sha256.txt     per-step outputs
 
-tests/
-  test_codec.py                27 unit tests (Vitest-portable)
+# Documentation
+docs/
+  PROCESS.md                   build pipeline narrative
+  SOURCES.md                   input wordlists + licenses
+  STATISTICS.md                final pool characteristics
+  BLOCKLIST.md                 every dropped word + reason (~7.5K entries)
+  TONE.md                      subjective calls + reasoning
+  EXTENSION.md                 immutability + v2 rules
+  CHANGELOG.md                 release notes + SHA-256 pins
 
-pyproject.toml               ← MIT, Python 3.10+
-LICENSE                      ← MIT
+# Repo-level
+.github/workflows/ci.yml     ← Python + TS tests on every push/PR;
+                               fails if wordlists.generated.ts is stale.
+LICENSE / NOTICE             ← MIT + source-wordlist attribution
 CLAUDE.md                    ← original spec / build prompt
 ```
 
 ## Reproducing the build
 
 The wordlists are committed and SHA-256-pinned, so you don't need to
-rebuild to use the package. But the build is fully reproducible:
+rebuild to use either package. But the build is fully reproducible:
+
+### Rebuilding the wordlists (Python pipeline)
 
 ```bash
 # 1. install build deps (runtime needs none of these)
@@ -559,6 +661,19 @@ python -m unittest discover tests   # 27 unit tests
 
 The build is **deterministic up to WordNet version and library versions**.
 The exact SHA-256 of the shipped files is pinned in `docs/CHANGELOG.md`.
+
+### Rebuilding the TS package
+
+```bash
+pnpm install
+pnpm run gen       # regenerates src/wordlists.generated.ts from .txt files
+pnpm run build     # tsc + tsup → dist/ (ESM + CJS + .d.ts)
+pnpm test          # 38 Vitest tests
+```
+
+CI runs both rebuilds on every push and fails if `src/wordlists.generated.ts`
+would diff after `pnpm run gen` — the mechanism that prevents the
+Python wordlists and the TS module from silently drifting apart.
 
 ## License
 
