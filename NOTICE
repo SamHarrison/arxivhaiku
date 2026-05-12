@@ -1,0 +1,25 @@
+arxivhaiku
+Copyright (c) 2026 Sam Harrison
+
+This project's source code is licensed under the MIT License (see LICENSE).
+
+The shipped wordlists `adjectives.txt` and `nouns.txt` are derived from the
+following open-source inputs, each under its own license. See docs/SOURCES.md
+for the full per-source attribution table including URLs, SHA-256 hashes,
+and acquisition timestamps.
+
+  - Heroku haikunator (Ruby)        — MIT
+  - haikunatorjs                    — MIT
+  - Docker moby names-generator     — Apache-2.0
+  - Wordle answers / allowed-guesses — Public domain (de facto)
+  - google-10000-english            — MIT
+  - LDNOOBW (profanity blocklist)   — CC-BY 4.0
+  - EFF Large Wordlist              — CC-BY 3.0
+  - BIP-39 English wordlist         — BSD-2-Clause / public domain
+  - taikuukaits/SimpleWordlists     — Public domain (Project-Gutenberg-derived)
+  - dwyl/english-words              — Unlicense (public domain)
+  - WordNet (via NLTK)              — WordNet License (permissive)
+
+Aggregating these sources into the curated arxivhaiku wordlists does not
+relicense the inputs; each source retains its own license. The arxivhaiku
+project asserts MIT for its own code and the build pipeline only.
