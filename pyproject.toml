@@ -26,8 +26,11 @@ classifiers = [
 arxivhaiku = "arxivhaiku.__main__:main"
 
 [project.urls]
-Homepage = "https://example.com/arxivhaiku"
-Documentation = "https://example.com/arxivhaiku/docs"
+Homepage = "https://github.com/SamHarrison/arxivhaiku"
+Documentation = "https://github.com/SamHarrison/arxivhaiku#readme"
+Repository = "https://github.com/SamHarrison/arxivhaiku"
+"Bug Tracker" = "https://github.com/SamHarrison/arxivhaiku/issues"
+Changelog = "https://github.com/SamHarrison/arxivhaiku/blob/master/docs/CHANGELOG.md"
 
 [tool.setuptools]
 packages = ["arxivhaiku"]

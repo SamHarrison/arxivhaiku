@@ -12,7 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ["18", "20", "22"]
+        # pnpm 11 (declared in package.json's packageManager field) requires
+        # Node ≥ 22.13. To target Node 18/20 we'd need to pin an older pnpm
+        # AND regenerate pnpm-lock.yaml under that version. Both Node 18 and
+        # 20 are post-EOL by 2026-05, so we test 22 + 24 only.
+        node: ["22", "24"]
     steps:
       - uses: actions/checkout@v4
 
