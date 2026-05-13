@@ -1,0 +1,6 @@
+# pnpm 11+ requires explicit allowlist for packages that run install scripts.
+# esbuild downloads a platform-specific native binary in postinstall;
+# without this, tsup (which depends on esbuild) cannot bundle.
+
+allowBuilds:
+  esbuild: true
